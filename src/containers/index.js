@@ -1,5 +1,5 @@
-import App from './App';
-import Home from './Header';
+import Header from './Header';
+import BoardList from './BoardList';
 import Login from './Login';
 
-export { App, Home, Login };
+export { Header, BoardList, Login };

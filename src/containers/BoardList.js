@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class App extends React.Component {
+class BoardList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,7 +15,7 @@ class App extends React.Component {
         
         return (
             <div>
-                { this.props.children }
+                <h1>Board List</h1>
             </div>
         );
     }
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(BoardList);

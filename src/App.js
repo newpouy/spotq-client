@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { Header, Login, BoardList } from './containers';
+
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <Header />
+            <Switch>
+              <Route exact path="/" component={BoardList}/>
+              <Route path="/Login" component={Login}/>
+              <Route path="/BoardList" component={BoardList}/>
+              <Route component={BoardList}/>
+            </Switch>
         </div>
-        <p className="App-intro">
-          sfafafsafasas fsafafa get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
