@@ -18,7 +18,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={BoardList}/>
               <Route path="/Login" component={Login}/>
-              <Route path="/BoardList" component={BoardList}/>
+              <Route path="/QUIZE" component={BoardList}/>
+              <Route path="/MY" component={BoardList}/>
               <Route component={BoardList}/>
             </Switch>
         </div>
