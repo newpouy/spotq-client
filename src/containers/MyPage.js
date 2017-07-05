@@ -2,15 +2,15 @@ import React from 'react';
 import { Button, Table, Icon } from 'antd';
 import { connect } from 'react-redux';
 
-class BoardList extends React.Component {
+class MyPage extends React.Component {
 
     constructor(props) {
         super(props);
 
-        this.handleSort = this.handleSort.bind(this);
-        this.handleSortPplr = this.handleSortPplr.bind(this);
-        this.handleSortNear = this.handleSortNear.bind(this);
-        this.handleSortType = this.handleSortType.bind(this);
+        this.handleList = this.handleList.bind(this);
+        this.handleFriendList = this.handleFriendList.bind(this);
+        this.handleGroupList = this.handleGroupList.bind(this);
+        this.handleRcmdList = this.handleRcmdList.bind(this);
         this.handleQuestion = this.handleQuestion.bind(this);
         this.handleShare = this.handleShare.bind(this);
     }
@@ -19,41 +19,32 @@ class BoardList extends React.Component {
         
     }
 
-    //인기별 정렬
-    handleSortPplr(){
-        alert("popular");
+    //친구 리스트
+    handleFriendList(){
+        alert("친구");
 
         this.handleSort();
     }
 
-    //근처 정렬
-    handleSortNear(){
-        alert("Near");
+    //그룹 리스트
+    handleGroupList(){
+        alert("그룹");
+
+        this.handleSort();
+    }
+
+    //추천 리스트
+    handleRcmdList(){
+        alert("추천");
 
         this.handleSort();
     }
 
     //종목별 정렬
-    handleSortType(){
-        alert("Type");
-
-        this.handleSort();
+    handleList(){
+        alert("리스트");
     }
 
-    //정렬
-    handleSort(){
-        alert("SORT");
-    }
-
-    //문제내기
-    handleQuestion(){
-        alert("문제내기");
-    }
-
-    //공유하기
-    handleShare(){
-        alert("공유하기");
-    }
     render() {
         const columns = [{
             title: 'lineData',
@@ -70,12 +61,10 @@ class BoardList extends React.Component {
             }];
         return (
             <div>
-                <Button onClick={this.handleSortPplr} size="large">인기</Button>
-                <Button onClick={this.handleSortNear} size="large">주변</Button>
-                <Button onClick={this.handleSortType} size="large">종목</Button>
+                <Button onClick={this.handleFriendList} size="large">친구</Button>
+                <Button onClick={this.handleGroupList} size="large">그룹</Button>
+                <Button onClick={this.handleRcmdList} size="large">추천</Button>
                 <Table showHeader={false} pagination={false} columns={columns} dataSource={data} />
-                <Button onClick={this.handleQuestion} size="large">문제내기</Button>
-                <Button onClick={this.handleShare} size="large">공유하기</Button>
             </div>
         );
     }
@@ -93,4 +82,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps)(BoardList);
+export default connect(mapStateToProps)(MyPage);

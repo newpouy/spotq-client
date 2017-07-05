@@ -1,5 +1,5 @@
-import Header from './Header';
+import MenuBar from './MenuBar';
 import BoardList from './BoardList';
 import Login from './Login';
 
-export { Header, BoardList, Login };
+export { MenuBar, BoardList, Login };
