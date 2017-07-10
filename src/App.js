@@ -3,7 +3,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { MenuBar, Login, BoardList } from './containers';
+import { MenuBar, Login, BoardList, MyPage } from './containers';
 
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -25,7 +25,7 @@ class App extends Component {
                 <Route exact path="/" component={BoardList}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/QUIZE" component={BoardList}/>
-                <Route path="/MY" component={BoardList}/>
+                <Route path="/MyPage" component={MyPage}/>
                 <Route component={BoardList}/>
               </Switch>
             </div>

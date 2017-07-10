@@ -19,10 +19,8 @@ class Login extends React.Component {
             <div>
                 <Row type="flex" justify="center">
                     <Col span={8}>
-                        
-                            <Button type="primary" style={{ width: '300', display : "block", textAlign : "center" }}>Primary</Button>
-                        
-                        <Button type="primary">Primary</Button>
+                        <Button type="primary" style={{ width: '100%', height : '50px', display : "block", textAlign : "center", margin:"15px 0px" }}>Google</Button>
+                        <Button type="primary" style={{ width: '100%', height : '50px', display : "block", textAlign : "center", margin:"15px 0px"}}>Cacao</Button>
                     </Col>
                 </Row>
             </div>
