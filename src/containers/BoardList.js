@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Table, Icon } from 'antd';
+import { Row, Col, Button, Table, Icon } from 'antd';
+
+import { WriteBoard } from '../components';
 import { connect } from 'react-redux';
 
 class BoardList extends React.Component {
@@ -70,12 +72,20 @@ class BoardList extends React.Component {
             }];
         return (
             <div>
-                <Button onClick={this.handleSortPplr} size="large">인기</Button>
-                <Button onClick={this.handleSortNear} size="large">주변</Button>
-                <Button onClick={this.handleSortType} size="large">종목</Button>
-                <Table showHeader={false} pagination={false} columns={columns} dataSource={data} />
-                <Button onClick={this.handleQuestion} size="large">문제내기</Button>
-                <Button onClick={this.handleShare} size="large">공유하기</Button>
+                <Row>
+                    <Col span={12} style={{'minWidth' : '500px'}}>
+                        <Button onClick={this.handleSortPplr} size="large">인기</Button>
+                        <Button onClick={this.handleSortNear} size="large">주변</Button>
+                        <Button onClick={this.handleSortType} size="large">종목</Button>
+                        <Table showHeader={false} pagination={false} columns={columns} dataSource={data} />
+                        <Button onClick={this.handleQuestion} size="large">문제내기</Button>
+                        <Button onClick={this.handleShare} size="large">공유하기</Button>
+                    </Col>
+                    <Col span={12} style={{'minWidth' : '500px'}}>
+                        <WriteBoard />
+                    </Col>
+                </Row>
+                
             </div>
         );
     }

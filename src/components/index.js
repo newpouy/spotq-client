@@ -1,4 +1,4 @@
-import Authentication from './Authen';
-import Header from './Header';
+import WriteBoard from './WriteBoard';
+import ReadBoard from './ReadBoard';
 
-export { Authentication, Header };
+export { WriteBoard, ReadBoard };
