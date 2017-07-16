@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Col, Button, Table, Icon } from 'antd';
-
+import { Row, Col, Table, Icon } from 'antd';
+import { Button } from 'antd-mobile';
 import { WriteBoard } from '../components';
 import { connect } from 'react-redux';
 
@@ -18,7 +18,7 @@ class BoardList extends React.Component {
     }
 
     componentDidMount() {
-        
+
     }
 
     //인기별 정렬
@@ -85,7 +85,7 @@ class BoardList extends React.Component {
                         <WriteBoard />
                     </Col>
                 </Row>
-                
+
             </div>
         );
     }
@@ -93,13 +93,13 @@ class BoardList extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        
+
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        
+
     };
 };
 
